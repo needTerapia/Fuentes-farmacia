@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_admin.css">
+    <title>Administracion</title>
+</head>
+<body>
+    <div class="bar">
+        <img src="logo - copia.png" alt="">
+        <h3>Administracion</h3>
+        <input type="button" value="cerrar sesion" class="btn-cerrar">
+    </div>
+    <h1>Personal Activo</h1>
+    <ul class="title_user" ><li>Nombre</li>Nombre de usuario<li>puesto</li><li></li></ul>
+    <div class="personal">
+    </div>
+
+    <input class="btn-add" type="button" value="Añadir">
+    <h1>Tareas pendientes</h1>
+    <ul class="title_user"><li>Tarea</li><li>Fecha de inicio</li><li>Fecha final</li><li>Hora de inicio</li><li>Hora final</li><li>responsable</li></ul>
+    <div class="tareas">
+
+    </div>
+    <input class="btn-tarea" type="button" value="Crear tarea">
+    
+    <!--Modal agregar empleado<!-->
+    <div class="modal">
+        <div class="ventana">
+            <div class="title">
+                <span></span>
+                <h1>Añadir personal</h1>
+                <a class="cerrar" onclick="cerrar()" href="#"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+
+            <div class="form">
+            <input type="text" placeholder="nombre" class="text nombre">
+            <input type="text" placeholder="nombre de usuario" class="text usuario">
+            <input type="text" placeholder="contraseña" class="text password">
+            <input type="text" placeholder="puesto" class="text puesto">
+            <select name="roll" class="roll">
+                <option>Administrador</option>
+                <option>empleado</option>
+                </select>
+                <input type="button" value="Agregar" class="btn_env">
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal agregar empleado<!-->
+
+    <!--Modal agregar tarea<!-->
+    
+        <div class="modal2">
+            <div class="ventana2">
+                <div class="title">
+                    <span></span>
+                    <h1>Crear tarea</h1>
+                    <a class="cerrar" onclick="cerrarTarea()" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+    
+                <div class="form_tarea">
+                <textarea  cols="30" rows="8" class="text tarea" placeholder="tarea"></textarea>
+                
+                <label for="inicio">Fecha de inicio:</label>
+                <input type="date" class="inicio">
+                <label for="final">Fecha final:</label>
+                <input type="date" class="final">
+                <label for="h-inicio">hora de inicio:</label>
+                <div class="time">
+                    <input type="number" max="23" min="0" class="hora"> :
+                    <input type="number" max="59" min="0" class="minuto">
+                </div>
+                <label for="h-inicio">hora final:</label>
+                <div class="time">
+                    <input type="number" max="23" min="0" class="hora2"> :
+                    <input type="number" max="59" min="0" class="minuto2">
+                </div>
+                <label for="user">Usuario responsable de la tarea:</label>
+
+                <input type="button" value="Crear" class="crear">
+                </div>
+            </div>
+        </div>
+
+    <script src="admin.js"></script>
+    <script src="https://kit.fontawesome.com/5c5dd7275c.js" crossorigin="anonymous"></script>
+</body>
+</html>
